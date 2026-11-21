@@ -5,8 +5,11 @@ import pandas as pd
 
 
 st.title("Streamlit App for Buildings Graphs")
+st.text("These graphs are meant to show the statistics of each agency"
+        "across the counties with the first graph showing how many are in each county"
+        " and the second counting how many rennovations were made to each agency ")
 st.text("Shows 2 data sets that take the count"
-        ") of the amount of zipcodes within each city "
+        " of the amount of zipcodes within each city "
         "and look at the agencies connected to them and see if "
         "they have been renovated over time")
 
@@ -67,7 +70,7 @@ tab1, tab2 = st.tabs(["Zipcode Building Count", "Floor Agency Changes"])
 with tab1:
     st.altair_chart(chart1, theme="streamlit", use_container_width=True)
     st.text("This visualization displays the distribution of ZIP code statistics "
-            "across different cities. I used a line graph to determine the points on the graph which "
+            "across different counties. I used a line graph to determine the points on the graph which "
             "show the count of how many zip codes in each city. For the encodings, I used a nominal type for City because it "
             "represents different city categories, a quantitative type for Stats because it contains numerical "
             "values and is supposed to count the number of zip codes. I also included tooltips that allow users to "
